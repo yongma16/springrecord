@@ -10,10 +10,14 @@ public class SpringrecordApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringrecordApplication.class, args);
+        SpringrecordApplication S=new SpringrecordApplication();
+        S.testbean();
+    }
+    public void testbean()
+    {
         ApplicationContext context1= new ClassPathXmlApplicationContext("bean01.xml");
-        User user=context1.getBean("user01",User.class);
+        User user=context1.getBean("user02",User.class);
         System.out.println(user);
-
     }
 
 }
