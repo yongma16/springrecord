@@ -3,7 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-        <bean id="S1" class="bean_test.Strange" init-method="initmethod" destroy-method="destroymethod">
-            <property name="s" value="<yma16>" ></property>
+
+    <bean id="s01" class="bean_test.Strange" init-method="initmethod" destroy-method="destroymethod">
+        <property name="slog" value="&lt;yma16&gt;"></property>
+<!--            <property name="slog">-->
+<!--                <value>-->
+<!--                    <![CDATA[<yma16>]]>-->
+<!--                </value>-->
+<!--            </property>-->
         </bean>
 </beans>

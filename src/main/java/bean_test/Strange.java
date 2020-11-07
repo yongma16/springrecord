@@ -1,7 +1,7 @@
 package bean_test;
 
 public class Strange {
-    private String s;
+    public String slog;
     public void initmethod()
     {
         System.out.print("创建Strange");
@@ -10,8 +10,14 @@ public class Strange {
     {
         System.out.print("销毁Strange");
     }
-    public void setS(String s) {
-        this.s = s;
+    public void setSlog(String slog) {
+        this.slog = slog;
     }
 
+    @Override
+    public String toString() {
+        return "Strange{" +
+                "s='" + slog + '\'' +
+                '}';
+    }
 }

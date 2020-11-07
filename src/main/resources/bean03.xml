@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Out01" class="bean_test.Outbean" init-method="initmethod" destroy-method="destroymethod">
+        <property name="oname" value="测试1号"></property>
+        <property name="userclass" ref="user_ref"></property>
+
+    </bean>
+    <bean id="user_ref" class="bean_test.User" init-method="initmethod" destroy-method="destroymethod">
+        <constructor-arg name="name" value="yma16_ref"></constructor-arg>
+        <constructor-arg name="sex" value="男_ref"></constructor-arg>
+        <constructor-arg name="age" value="16_ref"></constructor-arg>
+    </bean>
+</beans>
