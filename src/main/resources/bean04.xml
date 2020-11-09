@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="case01" class="bean_test.Array_Listcase" init-method="initmethod" destroy-method="destroymethod">
+        <property name="array_case">
+            <array>
+                <value>yma16</value>
+                <value>18</value>
+            </array>
+        </property>
+        <property name="map_case">
+            <map>
+                <entry key="I am a keay" value="I am a value"></entry>
+                <entry key="yma16" value="yma16 value"></entry>
+            </map>
+        </property>
+        <property name="list_case">
+            <list>
+                <value>yma16</value>
+                <value>2020</value>
+            </list>
+        </property>
+        <property name="set_case">
+            <set>
+                <value>I am a set</value>
+                <value>yma16</value>
+            </set>
+        </property>
+    </bean>
+</beans>
