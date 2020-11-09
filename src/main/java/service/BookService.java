@@ -22,5 +22,9 @@ public class BookService {
     {
         bookdao.deletebook(book);//删除
     }
+    public void selectCount()
+    {
+        bookdao.selecCount();//返回查询的结果
+    }
 
 }
