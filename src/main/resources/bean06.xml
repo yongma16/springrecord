@@ -4,24 +4,29 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-copntext.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
                             ">
 
-<!--    数据库连接池-->
+<!--    数据库连接池 阿里 mysql-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           destroy-method="close">
-        <property name="url" value="jdbc:mysql:///user_db" />
+        <property name="url" value="jdbc:mysql://localhost:3306/jdbctest?useUnicode=true&amp;characterEncoding=utf8" />
         <property name="username" value="root" />
-        <property name="password" value="root" />
+        <property name="password" value="password" />
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
     </bean>
+
 <!--    jdbc template对象注入-->
+
     <bean id="jdbctemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+
 <!--        注入datasource-->
+
         <property name="dataSource" ref="dataSource"></property>
     </bean>
+
 <!--组件扫描-->
-    <context:component-scan base-package="java">
+    <context:component-scan base-package="service,entity,dao">
 
     </context:component-scan>
 
