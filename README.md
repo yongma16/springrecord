@@ -1,6 +1,5 @@
 # springrecord
 spring学习日记
-@[TOC](Spring Bean)
 ### IOC容器
 控制反转(Inversion of Control)，是面向对象编程中的一种设计原则，可以降低耦合度。包括依赖注入（Dependency Injection）、依赖查找（Dependency Lookup）。创建对象时，系统将其所依赖的对象的引用传递给自身。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201106204124678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4ODcwMTQ1,size_16,color_FFFFFF,t_70#pic_center)
